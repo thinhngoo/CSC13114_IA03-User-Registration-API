@@ -1,7 +1,7 @@
 ## General information
 
 - **Public URL**: https://ia03-deployment.vercel.app/
-- **Tech**: Vite + React + TypeScript
+- **Tech**: NextJS
 - **Default account**:
   - Email: test@gmail.com
   - Password: 12345678
