@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: black;
+  caret-color: black;
+}
+
+:root {
+  --primary: #d81d84;
+  --on-primary: #ffffff;
+  --background: #f0f2f5;
+  --on-background: #000000;
+  --foreground: #ffffff;
+  --on-foreground: #000000;
+}
+
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #db2f8e;
+    --on-primary: #ffffff;
+    --background: #121212;
+    --on-background: #ffffff;
+    --foreground: #242526;
+    --on-foreground: #ffffff;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-text-fill-color: white;
+    caret-color: white;
+  }
+}
+
+body {
+  color: var(--on-background);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.neon-effect {
+  color: white;
+  animation: neon-glowing 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glowing {
+  0% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177, 0 0 70px #ff1177,
+      0 0 80px #ff1177, 0 0 100px #ff1177, 0 0 150px #ff1177;
+  }
+  100% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177, 0 0 70px #ff1177,
+      0 0 80px #ff1177, 0 0 100px #ff1177, 0 0 150px #ff1177;
+  }
+}
