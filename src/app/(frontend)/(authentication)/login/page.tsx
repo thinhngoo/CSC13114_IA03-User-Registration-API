@@ -20,7 +20,7 @@ export default function LoginPage() {
   const submitHandler = async (data: LoginData) => {
     toast.loading("Logging in...");
     await axios
-      .post("http://localhost:3000/user/login", data)
+      .post(`${process.env.NEXT_PUBLIC_DOMAIN}/user/login`, data)
       .then((response) => {
         console.log(response);
         router.push("/");

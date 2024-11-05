@@ -21,7 +21,7 @@ export default function RegisterPage() {
   const submitHandler = (data: RegisterData) => {
     toast.loading("Registering...");
     axios
-      .post(`${process.env.DOMAIN}/user/register`, data)
+      .post(`${process.env.NEXT_PUBLIC_DOMAIN}/user/register`, data)
       .then((response) => {
         console.log(response);
         router.push("/");
