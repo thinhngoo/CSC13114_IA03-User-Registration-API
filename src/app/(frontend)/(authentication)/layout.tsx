@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useCookies } from "next-client-cookies";
 import clsx from "clsx";
@@ -23,7 +24,7 @@ export default function AuthenticationLayout({
     if (user) router.push("/");
     if (pathname === "/login") setTitle("Login");
     else if (pathname === "/register") setTitle("Register");
-  }, [pathname]);
+  }, [pathname, user, router]);
 
   if (user) return null;
   return (
@@ -50,6 +51,8 @@ export default function AuthenticationLayout({
 function SubBackground() {
   return (
     <div className={clsx("w-2/5 h-full float-left", "hidden xl:block", "relative")}>
+      <Image src={backgroundImageURL.src} alt="background" fill className="object-cover" />
+
       <div
         className={clsx(
           "bg-[linear-gradient(45deg,rgba(4,2,96,0.7),rgba(180,49,183,0.9)),linear-gradient(90deg,rgba(51,136,140,0.3),rgba(87,240,240,0.1))]",
@@ -68,7 +71,6 @@ function SubBackground() {
           </div>
         </div>
       </div>
-      <img src={backgroundImageURL.src} alt="background" className="size-full object-cover" />
     </div>
   );
 }

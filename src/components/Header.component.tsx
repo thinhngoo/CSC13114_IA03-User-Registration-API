@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
 
@@ -12,7 +13,7 @@ export default function Header() {
       )}
     >
       <Link href="/" className={clsx("flex items-center bg", "w-fit h-full")}>
-        <img src="/images/icon.svg" className="size-10" alt="logo" />
+        <Image src="/images/icon.svg" width={44} height={44} alt="logo" />
         <span className={clsx("ml-3", "font-bold text-2xl")}>Just Login</span>
       </Link>
     </header>

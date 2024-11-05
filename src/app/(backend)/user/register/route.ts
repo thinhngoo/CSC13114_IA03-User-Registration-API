@@ -35,6 +35,7 @@ export async function POST(request: Request) {
       },
     });
   } catch (error) {
+    console.error(error);
     return new Response(JSON.stringify("User creation failed!"), {
       status: 500,
       headers: {

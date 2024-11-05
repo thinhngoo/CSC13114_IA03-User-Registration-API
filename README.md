@@ -5,18 +5,18 @@
 
 ## Requirements
 
-- [ ] Backend Implementation:
+- [x] Backend Implementation:
 
-  - [ ] API Endpoints: 2 points.
-  - [ ] Error Handling: 2 points.
+  - [x] API Endpoints: 2 points.
+  - [x] Error Handling: 2 points.
 
-- [ ] Frontend Implementation
+- [x] Frontend Implementation
 
   - [x] Routing: 1 point
-  - [ ] API Integration: 2 point
-  - [ ] User Experience: 2 point
+  - [x] API Integration: 2 point
+  - [x] User Experience: 2 point
 
-- [ ] Public host deployment: 1 point
+- [x] Public host deployment: 1 point
 
 ## Scripts
 

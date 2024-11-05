@@ -18,15 +18,18 @@ export default function LoginPage() {
   const router = useRouter();
 
   const submitHandler = async (data: LoginData) => {
+    toast.loading("Logging in...");
     await axios
       .post("http://localhost:3000/user/login", data)
       .then((response) => {
         console.log(response);
         router.push("/");
+        toast.dismiss();
         toast.success("Login successful.");
       })
       .catch((error) => {
         console.error(error);
+        toast.dismiss();
         toast.error(error.response.data);
       });
   };

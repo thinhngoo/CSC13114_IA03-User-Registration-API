@@ -19,15 +19,18 @@ export default function RegisterPage() {
   const router = useRouter();
 
   const submitHandler = (data: RegisterData) => {
+    toast.loading("Registering...");
     axios
       .post("/user/register", data)
       .then((response) => {
         console.log(response);
         router.push("/");
+        toast.dismiss();
         toast.success("Registration successful.");
       })
       .catch((error) => {
         console.error(error);
+        toast.dismiss();
         toast.error("Registration failed.");
       });
   };
